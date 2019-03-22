@@ -1,0 +1,50 @@
+/*  -------------- Modal box ---------------*/
+.modal {background: rgba(0,0,0,.25);display:none;z-index: 1001;}
+.modal__dialog {max-width: 90%; min-width:400px; margin: 25px 0;}
+#modalPaper{
+	background-image:url(paper.png);
+	background-repeat: repeat;
+	background-color: wheat;
+	border-radius: 5px;
+	box-shadow: 0px 2px 14px #000;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+
+.notepad, #modalContent {
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	resize:none;
+}
+
+.js-modal-hide{
+	padding:10px;
+	cursor: pointer;
+	font-weight:bold;
+	
+}
+.js-modal-hide:hover{
+	color:#99c;
+}
+
+.dialogInput{
+	width: 300px;
+	font-family: inherit;
+}
+#modalContent {
+
+    overflow: hidden;
+    padding-left: 100px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px);
+    background-size: 100% 1.2em;
+}
+
+.italics{
+	font-style:italic;
+}
+
+/*  -------------- Modal box ---------------*/

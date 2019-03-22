@@ -1,0 +1,132 @@
+/* For thesis */
+/*
+.paramWeight, .paramConnectedness, .bottomBar  {
+	display: none !important;
+}
+.paramValue::before, .paramValue::after{
+	content:'' !important;
+}
+
+.param{
+	min-width:0px !important;
+	margin-bottom:0 !important;
+}
+*/
+#cpaContent{
+	background-image: none !important;
+}
+/* /For thesis */
+
+html,body {
+    background: #eee;
+    color: #464637;
+    font-family: "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+	height:100%;
+	user-select:none;
+	-moz-user-select:none;
+}
+
+.glow{
+	animation:pulse 0.5s infinite alternate;
+}
+@keyframes pulse {
+  from { box-shadow:0px 0px 10px 3px #0066cc; }
+  to { box-shadow:0px 0px 20px 5px #0066cc; }
+}
+
+.logs{
+	display:block;
+	transition: all .2s ease-out;
+}
+
+p{margin:0}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type=range] {
+    height: 8px;
+	user-select: text;
+}
+
+textarea{
+	user-select: text;
+	white-space: pre;
+	width: 100%;
+    min-height: 200px;
+}
+
+h1,h2,h3,h4,h5 {
+    line-height: 40px;
+    font-family: heads, "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+}
+
+h5{
+	font-size:105%;
+}
+.inconsistent {
+    color: #f00 !important;
+}
+.hidden{
+	display:none;
+}
+.right{
+	text-align:right;
+}
+#dfire_logo {
+    opacity: .6;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 155px;
+}
+#submit {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+button {
+    font-family: heads;
+    font-size: 20px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.heading{
+	    font-family: heads;
+}
+
+#refresh,#path_heading {
+    font-family: heads;
+    font-size: 20px;
+}
+#refresh {
+    background-color: #fff;
+    border: 0;
+    margin-left: 20px;
+}
+
+@font-face {
+    font-family: heads;
+	src: url('BebasNeue Book.woff') format('woff');
+}
+
+button {
+    cursor: pointer;
+}
+
+#cpaIcon {
+    opacity: .2;
+    font-size: 50px;
+    position: absolute;
+	top: 0;
+	top: 0;
+    left: 0;
+    line-height: 50px;
+}
+

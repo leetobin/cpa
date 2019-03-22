@@ -1,0 +1,434 @@
+.strike{
+	text-decoration: line-through;
+}
+
+.highlightBack, .highlight {
+    background-color: #fff792 !important;
+}
+
+.highlight {
+    transition: background-color .5s, color .5s;
+	color: #000;
+}
+
+
+input[type=text].edits{
+    position: absolute;
+    top: 0;
+	left: 0;
+    box-sizing:border-box; /* stop it being bigger than containing element */
+    width:100%;
+    padding:0;
+    margin:0;
+    border:0;
+    font-size:inherit;
+    font-family: inherit;
+    text-align:inherit;
+	user-select: text;
+	-moz-user-select: text;
+}
+input[type=number] {
+    margin-bottom: 5px;
+    width: 3.5em;
+}
+
+.small{
+	font-size: small;
+}
+
+.right{
+	text-align:right;
+}
+
+#modelInfo{
+	position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: small;
+    background-color: cornsilk;
+    padding: 2px;
+    color: brown;
+	font-family:heads, "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#refresh,
+#path_heading {
+    font-family: heads, "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+}
+
+#refresh {
+    margin-left: 20px;
+    border: 0;
+    background-color: #fff;
+}
+
+.average_con, .pathText, .pathLink, .ignores{
+	pointer-events: none;
+}
+
+.pathLink{
+	padding-right:20px;
+	padding:0;
+	border-bottom: 1px dotted #ccc;
+}
+.path:nth-child(odd) {
+    
+}
+
+.path {
+    cursor: pointer;
+	
+}
+
+#pathsDiv {
+    padding: 5px;
+	padding-left:20px;
+	padding-right:20px;
+	font-size:smaller;
+}
+
+.path{	
+	cursor:pointer;
+}
+.pathText {
+    font-size: 90%;
+    letter-spacing: 0px;
+}
+
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+.noPad {
+    min-height: 1em;
+}
+
+.bigletter {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+    font-family: heads, "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 125%;
+	text-shadow: 0px 0px 1px #ccc;
+}
+
+button:focus {
+    outline: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type=number] {
+    width: 3.5em;
+    margin-bottom: 5px;
+}
+
+.question:hover, .paramButton:hover {
+    color:black;
+}
+
+.paramConnectedness{
+    font-size: 0.75em;
+    position: absolute;
+    left: 4px;
+    bottom: 2px;
+}
+
+
+
+.paramWeight {
+    font-size: 0.75em;
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+}
+
+.question{
+    opacity: .3;
+    cursor: pointer;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    font-weight: bold;
+    padding: 3px;
+    background-color: inherit;
+    line-height: .6em;
+    height: 8px;
+    width: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.param {
+    border-bottom: 1px solid #000;
+    border-radius: 5px;
+    border-top: 1px solid #eee;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 5px 10px #aaa;
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    min-width: 150px;
+	max-width: 600px;
+    padding: 0px 5px 0;
+    position: relative;
+    text-align: center;
+	vertical-align: top;
+}
+
+.statement,.paramButton {
+	cursor: pointer;
+    position: absolute;
+    top: 7px;
+}
+
+
+@keyframes fadein {
+    from {opacity:0}
+    to {opacity:1}
+}
+
+
+.paramButton {
+	line-height:1em;
+    right: 2px;
+	top: 0;
+}
+
+.paramName {
+    text-align: center;
+    cursor: move;
+    padding-left: 15px;
+	padding-right: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+    letter-spacing: 1px;
+    font-family: heads, "proxima-nova","Proxima Nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.paramValue {
+	position:relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding-right:30px;padding-left:30px;
+    transition: background-color .5s, color .5s;
+    word-break: break-all;
+}
+.paramValue::after { 
+    content: attr(data-weight);
+	font-size:.7em;
+	position: absolute;
+    right: 5px;
+    top: 3px;
+	
+}
+
+.paramValue::before { 
+    content: attr(data-connectedness);
+	font-size:.7em;
+	position: absolute;
+    left: 5px;
+    top: 3px;
+}
+
+.paramValues {
+    min-height: 10px;
+}
+.paramValues:last-child {
+    margin-right: 0;
+}
+
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* ------------------------------------ CA ------------------ */
+
+ul.slanted {
+	position: absolute;
+    right: -5px;
+    bottom: -24px;
+}
+
+.rounded{
+	border-radius:5px;
+}
+
+ul.slanted li {
+    display: inline-block;
+    white-space: nowrap;
+    transform: rotate(35deg);
+    width: 22px;
+    padding-top: 0px;
+    padding-right: 2px;
+    text-align: left;
+    /*
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+.questionDiv {
+    border-bottom-width: 15px;
+    margin-bottom: 0;
+}
+.questionText {
+    animation-duration: 1.5s;
+    animation-name: fadein;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    right: 2px;
+}
+.plus, .minus{
+	position:absolute;
+	width: 20px;
+	height: 20px;
+}
+
+.minus{
+	background: linear-gradient(to bottom, transparent 35%, #d00 35%, #d00 65%,  transparent 65%);
+}
+.plus {
+	background: linear-gradient(to bottom, transparent 35%, #000 35%, #000 65%,  transparent 65%),
+	linear-gradient(to right, transparent 35%, #000 35%, #000 65%, transparent 65%);
+}
+
+.inconsistent, .minus {
+	color:#f66;
+}
+
+.bottomBar {
+    position: relative;
+    height: 1em;
+}
+.gapBottom {
+    padding: 4px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+}
+
+.average_con {
+    padding-left: 10px;
+}
+
+
+
+/* ---------------------------------------------------------- CA -------------------------------  */
+
+.caLine {
+    vertical-align: middle;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.caValueText {
+    color: #f00;
+    font-size: 85%;
+    text-shadow: 0 0 2px #fff;
+}
+
+.caValue {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+	width: 20px;
+    height: 20px;
+    background-color: #fff;
+	box-shadow: 0 0 5px #777;
+    vertical-align: middle;
+    text-align: center;
+    margin: 1px;
+	border-radius: 5px;   
+}
+
+
+
+div.line {   
+	position:absolute;
+	z-index: 100;
+    transform-origin: 0 0;
+    height: 10px;
+	border-radius: 2px;
+	opacity:.7;
+	background-color: #fff792;
+}
+
+#caValueTextRight {
+    background-color: white;
+    font-size: 30px;
+    text-shadow: 0 0 3px #fff;
+    box-shadow: -1px 0px 15px #333;
+    border-radius: 10px;
+    right: -60px;
+    padding: 3px;
+    top: -7px;
+    height: 40px;
+    line-height: 1.3em;
+    position: absolute;
+}
+
+#caInputContainer {
+	
+    background-color: white;
+	position: absolute;
+    left: -150px;
+    top: -7px;
+    z-index: 300;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+    color: #111;
+    border-radius: 2px;
+    text-align: left;
+	padding: 7px;
+}
+
+.caInfo {
+	position: absolute;
+    font-size: smaller;
+    color: #000;
+    left: -100px;
+	z-index: 100;
+    bottom: 50px;
+    background-color: #eee;
+    background: linear-gradient(135deg, #ddd, #eee 20%);
+    min-width: 200px;	
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+    box-shadow: 0 0 30px #666;
+}
+
+#caDiv{
+	white-space: nowrap;
+}
+
+.caCol {
+    position: relative;
+    display: inline-table;
+    vertical-align: top;
+    border-bottom-right-radius: 3px;
+	border-bottom-width: .3px;
+    border-bottom-style: solid;
+}
+
+#caInput{
+	cursor:pointer;	
+	margin: 0;
+    height: 10px;
+	width:130px;
+}
+
+/* ----------------------------------- Tweak the colouring -------- */
+.bigletter, .slanted_text, .ca_header, .pathText{
+	background-color: transparent !important;
+}
